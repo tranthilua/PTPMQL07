@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PTPMQL07.Models.KhachHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Khách hàng", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenKh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoKh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoCMT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDT)
+        </th>
+        <th><label>Thao Tác</label></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenKh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaKh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HoKh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoCMT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoDT)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.TenKh }) |
+        @Html.ActionLink("Details", "Details", new { id = item.TenKh }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.TenKh })
+    </td>
+</tr>
+}
+
+</table>

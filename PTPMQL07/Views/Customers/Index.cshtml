@@ -1,0 +1,70 @@
+﻿@model IEnumerable<PTPMQL07.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenKh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoKh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoCMT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayDen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayDi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.Raw(item.TenKh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaKh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HoKh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoCMT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoDT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayDen)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayDi)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.NgayDen }) |
+        @Html.ActionLink("Details", "Details", new { id = item.NgayDen }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.NgayDen })
+    </td>
+</tr>
+}
+
+</table>

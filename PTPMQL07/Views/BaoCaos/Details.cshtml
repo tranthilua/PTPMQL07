@@ -1,0 +1,35 @@
+﻿@model PTPMQL07.Models.BaoCao
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BaoCao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DTThang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTThang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTNam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTNam)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DTNgay }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

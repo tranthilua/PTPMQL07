@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PTPMQL07.Models.BaoCao>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DTNgay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTThang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTNam)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.DTNgay)
+    </td>
+    <td>
+        @Html.Raw( item.DTThang)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DTNam)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.DTNgay }) |
+        @Html.ActionLink("Details", "Details", new { id = item.DTNgay }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.DTNgay })
+    </td>
+</tr>
+}
+
+</table>
