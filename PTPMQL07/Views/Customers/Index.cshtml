@@ -13,25 +13,26 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TenKh)
+            Họ Khách hàng
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MaKh)
+            tên khách hàng
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HoKh)
+            mã khách hàng
+        </th>
+
+        <th>
+            số chứng minh thư
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SoCMT)
+            Số điện thoại
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SoDT)
+            Ngày đến
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NgayDen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NgayDi)
+            Ngày Đi
         </th>
         <th></th>
     </tr>
@@ -39,14 +40,15 @@
 @foreach (var item in Model) {
 <tr>
     <td>
-        @Html.Raw(item.TenKh)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MaKh)
-    </td>
-    <td>
         @Html.DisplayFor(modelItem => item.HoKh)
     </td>
+    <td>
+        @item.TenKh
+    </td>
+    <td>
+        @item.MaKh
+    </td>
+
     <td>
         @Html.DisplayFor(modelItem => item.SoCMT)
     </td>

@@ -240,3 +240,5 @@ namespace PTPMQL07.Controllers
         }
     }
 }
+vào View :khachhang
+
